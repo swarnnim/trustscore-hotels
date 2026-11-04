@@ -1,0 +1,800 @@
+{
+ "summary": {
+  "records_in": 41,
+  "listings_out": 12,
+  "duplicates_collapsed": 29,
+  "possible_duplicates_flagged": 2,
+  "evaluation": {
+   "pairwise_precision": 1.0,
+   "pairwise_recall": 1.0,
+   "impure_clusters": []
+  }
+ },
+ "listings": [
+  {
+   "canonical_name": "Surya Intl Hotel",
+   "city": "Jaipur",
+   "stars": 3,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R024",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1168",
+     "name_raw": "Surya Intl Hotel",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 3721,
+     "cancellation_raw": "free_cancellation_days=3",
+     "rate_age_hours": 3
+    },
+    {
+     "record_id": "R023",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1161",
+     "name_raw": "Hotel Surya International",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 4020,
+     "cancellation_raw": "Free cancellation until 2 days before check-in",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R022",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1154",
+     "name_raw": "Surya International",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 4351,
+     "cancellation_raw": "Free cancellation until 1 days before check-in",
+     "rate_age_hours": 26
+    }
+   ],
+   "best_price_inr": 3721,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 83,
+   "reasons": [
+    "listed by 3 suppliers \u2014 identity cross-verified",
+    "freshest rate is 3h old",
+    "cancellation terms consistent across suppliers"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery"
+   ],
+   "truth_ids": [
+    "H07"
+   ]
+  },
+  {
+   "canonical_name": "Palm Grove Beach Resort & Spa",
+   "city": "Goa",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R033",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1231",
+     "name_raw": "Palm Grove Beach Resort",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8717,
+     "cancellation_raw": "Free cancellation until 2 days before check-in",
+     "rate_age_hours": 80
+    },
+    {
+     "record_id": "R030",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1210",
+     "name_raw": "Palm Grove Resort",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9434,
+     "cancellation_raw": "free_cancellation_days=1",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R031",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1217",
+     "name_raw": "Palm Grove Beach Resort & Spa",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9620,
+     "cancellation_raw": "free_cancellation_days=2",
+     "rate_age_hours": 80
+    },
+    {
+     "record_id": "R032",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1224",
+     "name_raw": "Palm Grove Beach Resort & Spa",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9946,
+     "cancellation_raw": "FREE CXL 2D PRIOR",
+     "rate_age_hours": 80
+    }
+   ],
+   "best_price_inr": 8717,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 83,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified",
+    "photo sets broadly consistent across suppliers",
+    "cancellation terms consistent across suppliers"
+   ],
+   "flags": [],
+   "truth_ids": [
+    "H10"
+   ]
+  },
+  {
+   "canonical_name": "Crystal Dunes Hotel",
+   "city": "Dubai",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R038",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1266",
+     "name_raw": "Crystal Dunes",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9703,
+     "cancellation_raw": "FREE CXL 3D PRIOR",
+     "rate_age_hours": 49
+    },
+    {
+     "record_id": "R039",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1273",
+     "name_raw": "Crystal Dunes Hotel",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9737,
+     "cancellation_raw": "FREE CXL 3D PRIOR",
+     "rate_age_hours": 1
+    },
+    {
+     "record_id": "R040",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1280",
+     "name_raw": "Crystal Dunes",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 10843,
+     "cancellation_raw": "free_cancellation_days=1",
+     "rate_age_hours": 14
+    },
+    {
+     "record_id": "R041",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1287",
+     "name_raw": "Crystal Dunes Hotel",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 12047,
+     "cancellation_raw": "free_cancellation_days=1",
+     "rate_age_hours": 1
+    }
+   ],
+   "best_price_inr": 9703,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 83,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified",
+    "freshest rate is 1h old",
+    "cancellation terms consistent across suppliers"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery"
+   ],
+   "truth_ids": [
+    "H12"
+   ]
+  },
+  {
+   "canonical_name": "Marina Skyline",
+   "city": "Dubai",
+   "stars": 5,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R025",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1175",
+     "name_raw": "MARINA SKYLINE HOTEL DUBAI",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 14939,
+     "cancellation_raw": "Free cancellation until 1 days before check-in",
+     "rate_age_hours": 3
+    },
+    {
+     "record_id": "R026",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1182",
+     "name_raw": "MARINA SKYLINE HOTEL DUBAI",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 15102,
+     "cancellation_raw": "Free cancellation until 3 days before check-in",
+     "rate_age_hours": 3
+    },
+    {
+     "record_id": "R028",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1196",
+     "name_raw": "Marina Skyline",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 15265,
+     "cancellation_raw": "Cancellation: free up to 1 days prior to arrival",
+     "rate_age_hours": 3
+    },
+    {
+     "record_id": "R027",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1189",
+     "name_raw": "Marina Skyline",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 17097,
+     "cancellation_raw": "Cancellation: free up to 2 days prior to arrival",
+     "rate_age_hours": 26
+    }
+   ],
+   "best_price_inr": 14939,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 83,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified",
+    "freshest rate is 3h old",
+    "cancellation terms consistent across suppliers"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery"
+   ],
+   "truth_ids": [
+    "H08"
+   ]
+  },
+  {
+   "canonical_name": "The Banyan Courtyard",
+   "city": "Bangkok",
+   "stars": 5,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R017",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1119",
+     "name_raw": "Banyan Courtyard Hotel",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 10271,
+     "cancellation_raw": "free_cancellation_days=5",
+     "rate_age_hours": 6
+    },
+    {
+     "record_id": "R015",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1105",
+     "name_raw": "The Banyan Courtyard",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 10405,
+     "cancellation_raw": "Free cancellation until 1 days before check-in",
+     "rate_age_hours": 1
+    },
+    {
+     "record_id": "R016",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1112",
+     "name_raw": "The Banyan Courtyard",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 10567,
+     "cancellation_raw": "FREE CXL 1D PRIOR",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R018",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1126",
+     "name_raw": "Banyan Courtyard Hotel",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 12321,
+     "cancellation_raw": "FREE CXL 1D PRIOR",
+     "rate_age_hours": 3
+    }
+   ],
+   "best_price_inr": 10271,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 73,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified",
+    "photo sets broadly consistent across suppliers",
+    "freshest rate is 1h old"
+   ],
+   "flags": [
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H05"
+   ]
+  },
+  {
+   "canonical_name": "Siam Orchid Residences",
+   "city": "Bangkok",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R037",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1259",
+     "name_raw": "Siam Orchid Residences",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 6524,
+     "cancellation_raw": "FREE CXL 2D PRIOR",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R034",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1238",
+     "name_raw": "Siam Orchid Residence",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 6635,
+     "cancellation_raw": "Cancellation: free up to 2 days prior to arrival",
+     "rate_age_hours": 14
+    },
+    {
+     "record_id": "R035",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1245",
+     "name_raw": "Siam Orchid Residences",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 6638,
+     "cancellation_raw": "FREE CXL 7D PRIOR",
+     "rate_age_hours": 6
+    },
+    {
+     "record_id": "R036",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1252",
+     "name_raw": "SIAM ORCHID RESIDENCE BANGKOK",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 7208,
+     "cancellation_raw": "Cancellation: free up to 7 days prior to arrival",
+     "rate_age_hours": 49
+    }
+   ],
+   "best_price_inr": 6524,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 65,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified",
+    "freshest rate is 6h old"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery",
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H11"
+   ]
+  },
+  {
+   "canonical_name": "Seaside Meridian",
+   "city": "Goa",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R019",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1133",
+     "name_raw": "SEASIDE MERIDIAN",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8022,
+     "cancellation_raw": "Free cancellation until 1 days before check-in",
+     "rate_age_hours": 1
+    },
+    {
+     "record_id": "R021",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1147",
+     "name_raw": "Seaside Meridian Hotel Goa",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8201,
+     "cancellation_raw": "free_cancellation_days=5",
+     "rate_age_hours": 3
+    },
+    {
+     "record_id": "R020",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1140",
+     "name_raw": "Seaside Meridian",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8593,
+     "cancellation_raw": "free_cancellation_days=5",
+     "rate_age_hours": 1
+    }
+   ],
+   "best_price_inr": 8022,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 65,
+   "reasons": [
+    "listed by 3 suppliers \u2014 identity cross-verified",
+    "freshest rate is 1h old"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery",
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H06"
+   ]
+  },
+  {
+   "canonical_name": "Grand Orchid Htl",
+   "city": "Dubai",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R007",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1049",
+     "name_raw": "Hotel Grand Orchid",
+     "room_raw": "Deluxe Room - King Bed",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9048,
+     "cancellation_raw": "Non-refundable",
+     "rate_age_hours": 49
+    },
+    {
+     "record_id": "R006",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1042",
+     "name_raw": "GRAND ORCHID HTL",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9543,
+     "cancellation_raw": "FREE CXL 1D PRIOR",
+     "rate_age_hours": 49
+    },
+    {
+     "record_id": "R005",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1035",
+     "name_raw": "Grand Orchid Hotel Dubai",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 10880,
+     "cancellation_raw": "Cancellation: free up to 1 days prior to arrival",
+     "rate_age_hours": 6
+    }
+   ],
+   "best_price_inr": 9048,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 65,
+   "reasons": [
+    "listed by 3 suppliers \u2014 identity cross-verified",
+    "freshest rate is 6h old"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery",
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H02"
+   ]
+  },
+  {
+   "canonical_name": "Riverside Lotus Hotel",
+   "city": "Bangkok",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R012",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1084",
+     "name_raw": "Riverside Lotus Hotel",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 5435,
+     "cancellation_raw": "Cancellation: free up to 3 days prior to arrival",
+     "rate_age_hours": 80
+    },
+    {
+     "record_id": "R014",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1098",
+     "name_raw": "Riverside Lotus",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 5867,
+     "cancellation_raw": "FREE CXL 7D PRIOR",
+     "rate_age_hours": 49
+    },
+    {
+     "record_id": "R013",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1091",
+     "name_raw": "Riverside Lotus Hotel",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 5965,
+     "cancellation_raw": "FREE CXL 7D PRIOR",
+     "rate_age_hours": 3
+    }
+   ],
+   "best_price_inr": 5435,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 64,
+   "reasons": [
+    "listed by 3 suppliers \u2014 identity cross-verified",
+    "freshest rate is 3h old"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery",
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H04"
+   ]
+  },
+  {
+   "canonical_name": "Grand Orchid Suites",
+   "city": "Dubai",
+   "stars": 4,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R008",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1056",
+     "name_raw": "GRAND ORCHID SUITES",
+     "room_raw": "DLX King",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8073,
+     "cancellation_raw": "free_cancellation_days=2",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R011",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1077",
+     "name_raw": "Grand Orchid Suites Dubai",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8566,
+     "cancellation_raw": "Cancellation: free up to 3 days prior to arrival",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R010",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1070",
+     "name_raw": "GRAND ORCHID SUITES",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 8823,
+     "cancellation_raw": "Free cancellation until 7 days before check-in",
+     "rate_age_hours": 49
+    },
+    {
+     "record_id": "R009",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1063",
+     "name_raw": "Grand Orchid Suites",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 9617,
+     "cancellation_raw": "FREE CXL 7D PRIOR",
+     "rate_age_hours": 80
+    }
+   ],
+   "best_price_inr": 8073,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 57,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery",
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H03"
+   ]
+  },
+  {
+   "canonical_name": "Azure Palm Resort",
+   "city": "Goa",
+   "stars": 5,
+   "suppliers": [
+    "BedBank Alpha",
+    "DirectConnect",
+    "GlobalRooms",
+    "TravelWholesale Co"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R002",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1014",
+     "name_raw": "Azure Palm Resort",
+     "room_raw": "King Deluxe",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 10688,
+     "cancellation_raw": "FREE CXL 2D PRIOR",
+     "rate_age_hours": 49
+    },
+    {
+     "record_id": "R001",
+     "supplier": "BedBank Alpha",
+     "supplier_hotel_id": "BE-1007",
+     "name_raw": "Azure Palm Resort & Spa Goa",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 11012,
+     "cancellation_raw": "Free cancellation until 7 days before check-in",
+     "rate_age_hours": 26
+    },
+    {
+     "record_id": "R003",
+     "supplier": "GlobalRooms",
+     "supplier_hotel_id": "GL-1021",
+     "name_raw": "Azure Palm Resort & Spa",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 11999,
+     "cancellation_raw": "Cancellation: free up to 3 days prior to arrival",
+     "rate_age_hours": 80
+    },
+    {
+     "record_id": "R004",
+     "supplier": "TravelWholesale Co",
+     "supplier_hotel_id": "TR-1028",
+     "name_raw": "Azure Palm Resort",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 12964,
+     "cancellation_raw": "Cancellation: free up to 5 days prior to arrival",
+     "rate_age_hours": 26
+    }
+   ],
+   "best_price_inr": 10688,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 57,
+   "reasons": [
+    "listed by 4 suppliers \u2014 identity cross-verified"
+   ],
+   "flags": [
+    "photo counts differ a lot across suppliers \u2014 check imagery",
+    "cancellation terms CONFLICT across suppliers \u2014 check before booking"
+   ],
+   "truth_ids": [
+    "H01"
+   ]
+  },
+  {
+   "canonical_name": "Old Town Heritage Inn",
+   "city": "Jaipur",
+   "stars": 3,
+   "suppliers": [
+    "DirectConnect"
+   ],
+   "supplier_records": [
+    {
+     "record_id": "R029",
+     "supplier": "DirectConnect",
+     "supplier_hotel_id": "DI-1203",
+     "name_raw": "Old Town Heritage Inn",
+     "room_raw": "Deluxe King Room",
+     "room_canonical": "Deluxe King Room",
+     "price_inr": 3308,
+     "cancellation_raw": "Free cancellation until 1 days before check-in",
+     "rate_age_hours": 80
+    }
+   ],
+   "best_price_inr": 3308,
+   "rooms": [
+    "Deluxe King Room"
+   ],
+   "trust_score": 49,
+   "reasons": [],
+   "flags": [
+    "single-supplier listing \u2014 cannot cross-verify identity",
+    "all rates stale (freshest is 80h old) \u2014 re-price before booking"
+   ],
+   "truth_ids": [
+    "H09"
+   ]
+  }
+ ]
+}

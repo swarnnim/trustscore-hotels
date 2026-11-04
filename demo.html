@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>TrustScore Hotels — Prototype Demo (sample data)</title><style>
+body{font-family:system-ui,sans-serif;background:#0b1f3a;color:#e8eef7;margin:0;padding:24px}
+h1 span{color:#2dd4bf} table{border-collapse:collapse;width:100%;font-size:13px}
+td,th{border-bottom:1px solid #24425f;padding:5px 8px;text-align:left}
+.card{background:#102a4a;border:1px solid #24425f;border-radius:10px;padding:16px;margin:12px 0}
+.card header{display:flex;justify-content:space-between;align-items:center}
+.badge{color:#08131f;font-weight:700;border-radius:999px;padding:4px 12px}
+.meta{color:#9fb6cf} .reasons{list-style:none;padding:0} details{margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr;gap:8px} .stat{color:#2dd4bf;font-weight:700}
+</style></head><body>
+<h1>TrustScore <span>Hotels</span> — prototype demo</h1>
+<p>SYNTHETIC SAMPLE DATA (generated, seed 42) — not real supplier data.
+41 raw supplier records → <span class="stat">12 canonical listings</span>
+(29 duplicates collapsed). Merge quality vs ground truth:
+pairwise precision <span class="stat">1.0</span>,
+recall <span class="stat">1.0</span>.</p>
+<h2>Before — what the agent sees today</h2>
+<table><tr><th>Supplier</th><th>Name as listed</th><th>City</th><th>Room as listed</th><th>Price</th><th>Cancellation</th><th>Rate age</th></tr>
+<tr><td>GlobalRooms</td><td>Azure Palm Resort &amp; Spa</td><td>Goa</td><td>Deluxe King Room</td><td>₹11,999</td><td>Cancellation: free up to 3 days prior to arrival</td><td>80h</td></tr>
+<tr><td>BedBank Alpha</td><td>Grand Orchid Suites Dubai</td><td>Dubai</td><td>Deluxe King Room</td><td>₹8,566</td><td>Cancellation: free up to 3 days prior to arrival</td><td>26h</td></tr>
+<tr><td>GlobalRooms</td><td>MARINA SKYLINE HOTEL DUBAI</td><td>Dubai</td><td>Deluxe King Room</td><td>₹15,102</td><td>Free cancellation until 3 days before check-in</td><td>3h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Hotel Grand Orchid</td><td>Dubai</td><td>Deluxe Room - King Bed</td><td>₹9,048</td><td>Non-refundable</td><td>49h</td></tr>
+<tr><td>GlobalRooms</td><td>Riverside Lotus</td><td>Bangkok</td><td>King Deluxe</td><td>₹5,867</td><td>FREE CXL 7D PRIOR</td><td>49h</td></tr>
+<tr><td>BedBank Alpha</td><td>Azure Palm Resort &amp; Spa Goa</td><td>Goa</td><td>Deluxe King Room</td><td>₹11,012</td><td>Free cancellation until 7 days before check-in</td><td>26h</td></tr>
+<tr><td>DirectConnect</td><td>GRAND ORCHID SUITES</td><td>Dubai</td><td>King Deluxe</td><td>₹8,823</td><td>Free cancellation until 7 days before check-in</td><td>49h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Palm Grove Beach Resort</td><td>Goa</td><td>DLX King</td><td>₹8,717</td><td>Free cancellation until 2 days before check-in</td><td>80h</td></tr>
+<tr><td>DirectConnect</td><td>Palm Grove Beach Resort &amp; Spa</td><td>Goa</td><td>DLX King</td><td>₹9,620</td><td>free_cancellation_days=2</td><td>80h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Riverside Lotus Hotel</td><td>Bangkok</td><td>Deluxe King Room</td><td>₹5,965</td><td>FREE CXL 7D PRIOR</td><td>3h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Azure Palm Resort</td><td>Goa</td><td>Deluxe King Room</td><td>₹12,964</td><td>Cancellation: free up to 5 days prior to arrival</td><td>26h</td></tr>
+<tr><td>BedBank Alpha</td><td>Grand Orchid Hotel Dubai</td><td>Dubai</td><td>King Deluxe</td><td>₹10,880</td><td>Cancellation: free up to 1 days prior to arrival</td><td>6h</td></tr>
+<tr><td>BedBank Alpha</td><td>Riverside Lotus Hotel</td><td>Bangkok</td><td>DLX King</td><td>₹5,435</td><td>Cancellation: free up to 3 days prior to arrival</td><td>80h</td></tr>
+<tr><td>DirectConnect</td><td>Azure Palm Resort</td><td>Goa</td><td>King Deluxe</td><td>₹10,688</td><td>FREE CXL 2D PRIOR</td><td>49h</td></tr>
+<tr><td>DirectConnect</td><td>SEASIDE MERIDIAN</td><td>Goa</td><td>King Deluxe</td><td>₹8,022</td><td>Free cancellation until 1 days before check-in</td><td>1h</td></tr>
+<tr><td>BedBank Alpha</td><td>Seaside Meridian</td><td>Goa</td><td>King Deluxe</td><td>₹8,593</td><td>free_cancellation_days=5</td><td>1h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Surya International</td><td>Jaipur</td><td>Deluxe King Room</td><td>₹4,351</td><td>Free cancellation until 1 days before check-in</td><td>26h</td></tr>
+<tr><td>TravelWholesale Co</td><td>MARINA SKYLINE HOTEL DUBAI</td><td>Dubai</td><td>Deluxe King Room</td><td>₹14,939</td><td>Free cancellation until 1 days before check-in</td><td>3h</td></tr>
+<tr><td>GlobalRooms</td><td>Banyan Courtyard Hotel</td><td>Bangkok</td><td>DLX King</td><td>₹10,271</td><td>free_cancellation_days=5</td><td>6h</td></tr>
+<tr><td>BedBank Alpha</td><td>Hotel Surya International</td><td>Jaipur</td><td>King Deluxe</td><td>₹4,020</td><td>Free cancellation until 2 days before check-in</td><td>26h</td></tr>
+<tr><td>DirectConnect</td><td>Siam Orchid Residences</td><td>Bangkok</td><td>DLX King</td><td>₹6,638</td><td>FREE CXL 7D PRIOR</td><td>6h</td></tr>
+<tr><td>GlobalRooms</td><td>Crystal Dunes Hotel</td><td>Dubai</td><td>Deluxe King Room</td><td>₹9,737</td><td>FREE CXL 3D PRIOR</td><td>1h</td></tr>
+<tr><td>BedBank Alpha</td><td>Siam Orchid Residences</td><td>Bangkok</td><td>DLX King</td><td>₹6,524</td><td>FREE CXL 2D PRIOR</td><td>26h</td></tr>
+<tr><td>BedBank Alpha</td><td>Palm Grove Beach Resort &amp; Spa</td><td>Goa</td><td>Deluxe King Room</td><td>₹9,946</td><td>FREE CXL 2D PRIOR</td><td>80h</td></tr>
+<tr><td>BedBank Alpha</td><td>Crystal Dunes</td><td>Dubai</td><td>King Deluxe</td><td>₹10,843</td><td>free_cancellation_days=1</td><td>14h</td></tr>
+<tr><td>DirectConnect</td><td>Surya Intl Hotel</td><td>Jaipur</td><td>Deluxe Room - King Bed</td><td>₹3,721</td><td>free_cancellation_days=3</td><td>3h</td></tr>
+<tr><td>DirectConnect</td><td>GRAND ORCHID HTL</td><td>Dubai</td><td>DLX King</td><td>₹9,543</td><td>FREE CXL 1D PRIOR</td><td>49h</td></tr>
+<tr><td>DirectConnect</td><td>The Banyan Courtyard</td><td>Bangkok</td><td>Deluxe Room - King Bed</td><td>₹10,405</td><td>Free cancellation until 1 days before check-in</td><td>1h</td></tr>
+<tr><td>BedBank Alpha</td><td>Banyan Courtyard Hotel</td><td>Bangkok</td><td>Deluxe King Room</td><td>₹12,321</td><td>FREE CXL 1D PRIOR</td><td>3h</td></tr>
+<tr><td>DirectConnect</td><td>Crystal Dunes Hotel</td><td>Dubai</td><td>King Deluxe</td><td>₹12,047</td><td>free_cancellation_days=1</td><td>1h</td></tr>
+<tr><td>DirectConnect</td><td>Marina Skyline</td><td>Dubai</td><td>Deluxe Room - King Bed</td><td>₹17,097</td><td>Cancellation: free up to 2 days prior to arrival</td><td>26h</td></tr>
+<tr><td>BedBank Alpha</td><td>Marina Skyline</td><td>Dubai</td><td>King Deluxe</td><td>₹15,265</td><td>Cancellation: free up to 1 days prior to arrival</td><td>3h</td></tr>
+<tr><td>DirectConnect</td><td>Old Town Heritage Inn</td><td>Jaipur</td><td>Deluxe King Room</td><td>₹3,308</td><td>Free cancellation until 1 days before check-in</td><td>80h</td></tr>
+<tr><td>GlobalRooms</td><td>Seaside Meridian Hotel Goa</td><td>Goa</td><td>Deluxe Room - King Bed</td><td>₹8,201</td><td>free_cancellation_days=5</td><td>3h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Siam Orchid Residence</td><td>Bangkok</td><td>Deluxe Room - King Bed</td><td>₹6,635</td><td>Cancellation: free up to 2 days prior to arrival</td><td>14h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Crystal Dunes</td><td>Dubai</td><td>King Deluxe</td><td>₹9,703</td><td>FREE CXL 3D PRIOR</td><td>49h</td></tr>
+<tr><td>TravelWholesale Co</td><td>Grand Orchid Suites</td><td>Dubai</td><td>King Deluxe</td><td>₹9,617</td><td>FREE CXL 7D PRIOR</td><td>80h</td></tr>
+<tr><td>GlobalRooms</td><td>Palm Grove Resort</td><td>Goa</td><td>Deluxe Room - King Bed</td><td>₹9,434</td><td>free_cancellation_days=1</td><td>26h</td></tr>
+<tr><td>GlobalRooms</td><td>GRAND ORCHID SUITES</td><td>Dubai</td><td>DLX King</td><td>₹8,073</td><td>free_cancellation_days=2</td><td>26h</td></tr>
+<tr><td>TravelWholesale Co</td><td>The Banyan Courtyard</td><td>Bangkok</td><td>Deluxe Room - King Bed</td><td>₹10,567</td><td>FREE CXL 1D PRIOR</td><td>26h</td></tr>
+<tr><td>GlobalRooms</td><td>SIAM ORCHID RESIDENCE BANGKOK</td><td>Bangkok</td><td>Deluxe Room - King Bed</td><td>₹7,208</td><td>Cancellation: free up to 7 days prior to arrival</td><td>49h</td></tr></table>
+<h2>After — TrustScore listings (ranked by trust, then price)</h2>
+
+<article class="card">
+  <header><h3>Surya Intl Hotel</h3>
+    <span class="badge" style="background:#1d9e75">TrustScore 83</span></header>
+  <p class="meta">Jaipur · ★★★ · best rate ₹3,721
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 3 suppliers — identity cross-verified</li><li>✓ freshest rate is 3h old</li><li>✓ cancellation terms consistent across suppliers</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li></ul>
+  <details><summary>View all 3 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>DirectConnect</td><td>Surya Intl Hotel</td><td>Deluxe King Room</td><td>₹3,721</td><td>free_cancellation_days=3</td></tr><tr><td>BedBank Alpha</td><td>Hotel Surya International</td><td>Deluxe King Room</td><td>₹4,020</td><td>Free cancellation until 2 days before check-in</td></tr><tr><td>TravelWholesale Co</td><td>Surya International</td><td>Deluxe King Room</td><td>₹4,351</td><td>Free cancellation until 1 days before check-in</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Palm Grove Beach Resort &amp; Spa</h3>
+    <span class="badge" style="background:#1d9e75">TrustScore 83</span></header>
+  <p class="meta">Goa · ★★★★ · best rate ₹8,717
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>✓ photo sets broadly consistent across suppliers</li><li>✓ cancellation terms consistent across suppliers</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>TravelWholesale Co</td><td>Palm Grove Beach Resort</td><td>Deluxe King Room</td><td>₹8,717</td><td>Free cancellation until 2 days before check-in</td></tr><tr><td>GlobalRooms</td><td>Palm Grove Resort</td><td>Deluxe King Room</td><td>₹9,434</td><td>free_cancellation_days=1</td></tr><tr><td>DirectConnect</td><td>Palm Grove Beach Resort &amp; Spa</td><td>Deluxe King Room</td><td>₹9,620</td><td>free_cancellation_days=2</td></tr><tr><td>BedBank Alpha</td><td>Palm Grove Beach Resort &amp; Spa</td><td>Deluxe King Room</td><td>₹9,946</td><td>FREE CXL 2D PRIOR</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Crystal Dunes Hotel</h3>
+    <span class="badge" style="background:#1d9e75">TrustScore 83</span></header>
+  <p class="meta">Dubai · ★★★★ · best rate ₹9,703
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>✓ freshest rate is 1h old</li><li>✓ cancellation terms consistent across suppliers</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>TravelWholesale Co</td><td>Crystal Dunes</td><td>Deluxe King Room</td><td>₹9,703</td><td>FREE CXL 3D PRIOR</td></tr><tr><td>GlobalRooms</td><td>Crystal Dunes Hotel</td><td>Deluxe King Room</td><td>₹9,737</td><td>FREE CXL 3D PRIOR</td></tr><tr><td>BedBank Alpha</td><td>Crystal Dunes</td><td>Deluxe King Room</td><td>₹10,843</td><td>free_cancellation_days=1</td></tr><tr><td>DirectConnect</td><td>Crystal Dunes Hotel</td><td>Deluxe King Room</td><td>₹12,047</td><td>free_cancellation_days=1</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Marina Skyline</h3>
+    <span class="badge" style="background:#1d9e75">TrustScore 83</span></header>
+  <p class="meta">Dubai · ★★★★★ · best rate ₹14,939
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>✓ freshest rate is 3h old</li><li>✓ cancellation terms consistent across suppliers</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>TravelWholesale Co</td><td>MARINA SKYLINE HOTEL DUBAI</td><td>Deluxe King Room</td><td>₹14,939</td><td>Free cancellation until 1 days before check-in</td></tr><tr><td>GlobalRooms</td><td>MARINA SKYLINE HOTEL DUBAI</td><td>Deluxe King Room</td><td>₹15,102</td><td>Free cancellation until 3 days before check-in</td></tr><tr><td>BedBank Alpha</td><td>Marina Skyline</td><td>Deluxe King Room</td><td>₹15,265</td><td>Cancellation: free up to 1 days prior to arrival</td></tr><tr><td>DirectConnect</td><td>Marina Skyline</td><td>Deluxe King Room</td><td>₹17,097</td><td>Cancellation: free up to 2 days prior to arrival</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>The Banyan Courtyard</h3>
+    <span class="badge" style="background:#e8a13a">TrustScore 73</span></header>
+  <p class="meta">Bangkok · ★★★★★ · best rate ₹10,271
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>✓ photo sets broadly consistent across suppliers</li><li>✓ freshest rate is 1h old</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>GlobalRooms</td><td>Banyan Courtyard Hotel</td><td>Deluxe King Room</td><td>₹10,271</td><td>free_cancellation_days=5</td></tr><tr><td>DirectConnect</td><td>The Banyan Courtyard</td><td>Deluxe King Room</td><td>₹10,405</td><td>Free cancellation until 1 days before check-in</td></tr><tr><td>TravelWholesale Co</td><td>The Banyan Courtyard</td><td>Deluxe King Room</td><td>₹10,567</td><td>FREE CXL 1D PRIOR</td></tr><tr><td>BedBank Alpha</td><td>Banyan Courtyard Hotel</td><td>Deluxe King Room</td><td>₹12,321</td><td>FREE CXL 1D PRIOR</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Siam Orchid Residences</h3>
+    <span class="badge" style="background:#e8a13a">TrustScore 65</span></header>
+  <p class="meta">Bangkok · ★★★★ · best rate ₹6,524
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>✓ freshest rate is 6h old</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>BedBank Alpha</td><td>Siam Orchid Residences</td><td>Deluxe King Room</td><td>₹6,524</td><td>FREE CXL 2D PRIOR</td></tr><tr><td>TravelWholesale Co</td><td>Siam Orchid Residence</td><td>Deluxe King Room</td><td>₹6,635</td><td>Cancellation: free up to 2 days prior to arrival</td></tr><tr><td>DirectConnect</td><td>Siam Orchid Residences</td><td>Deluxe King Room</td><td>₹6,638</td><td>FREE CXL 7D PRIOR</td></tr><tr><td>GlobalRooms</td><td>SIAM ORCHID RESIDENCE BANGKOK</td><td>Deluxe King Room</td><td>₹7,208</td><td>Cancellation: free up to 7 days prior to arrival</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Seaside Meridian</h3>
+    <span class="badge" style="background:#e8a13a">TrustScore 65</span></header>
+  <p class="meta">Goa · ★★★★ · best rate ₹8,022
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 3 suppliers — identity cross-verified</li><li>✓ freshest rate is 1h old</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 3 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>DirectConnect</td><td>SEASIDE MERIDIAN</td><td>Deluxe King Room</td><td>₹8,022</td><td>Free cancellation until 1 days before check-in</td></tr><tr><td>GlobalRooms</td><td>Seaside Meridian Hotel Goa</td><td>Deluxe King Room</td><td>₹8,201</td><td>free_cancellation_days=5</td></tr><tr><td>BedBank Alpha</td><td>Seaside Meridian</td><td>Deluxe King Room</td><td>₹8,593</td><td>free_cancellation_days=5</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Grand Orchid Htl</h3>
+    <span class="badge" style="background:#e8a13a">TrustScore 65</span></header>
+  <p class="meta">Dubai · ★★★★ · best rate ₹9,048
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 3 suppliers — identity cross-verified</li><li>✓ freshest rate is 6h old</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 3 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>TravelWholesale Co</td><td>Hotel Grand Orchid</td><td>Deluxe King Room</td><td>₹9,048</td><td>Non-refundable</td></tr><tr><td>DirectConnect</td><td>GRAND ORCHID HTL</td><td>Deluxe King Room</td><td>₹9,543</td><td>FREE CXL 1D PRIOR</td></tr><tr><td>BedBank Alpha</td><td>Grand Orchid Hotel Dubai</td><td>Deluxe King Room</td><td>₹10,880</td><td>Cancellation: free up to 1 days prior to arrival</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Riverside Lotus Hotel</h3>
+    <span class="badge" style="background:#d95f4b">TrustScore 64</span></header>
+  <p class="meta">Bangkok · ★★★★ · best rate ₹5,435
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 3 suppliers — identity cross-verified</li><li>✓ freshest rate is 3h old</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 3 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>BedBank Alpha</td><td>Riverside Lotus Hotel</td><td>Deluxe King Room</td><td>₹5,435</td><td>Cancellation: free up to 3 days prior to arrival</td></tr><tr><td>GlobalRooms</td><td>Riverside Lotus</td><td>Deluxe King Room</td><td>₹5,867</td><td>FREE CXL 7D PRIOR</td></tr><tr><td>TravelWholesale Co</td><td>Riverside Lotus Hotel</td><td>Deluxe King Room</td><td>₹5,965</td><td>FREE CXL 7D PRIOR</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Grand Orchid Suites</h3>
+    <span class="badge" style="background:#d95f4b">TrustScore 57</span></header>
+  <p class="meta">Dubai · ★★★★ · best rate ₹8,073
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>GlobalRooms</td><td>GRAND ORCHID SUITES</td><td>Deluxe King Room</td><td>₹8,073</td><td>free_cancellation_days=2</td></tr><tr><td>BedBank Alpha</td><td>Grand Orchid Suites Dubai</td><td>Deluxe King Room</td><td>₹8,566</td><td>Cancellation: free up to 3 days prior to arrival</td></tr><tr><td>DirectConnect</td><td>GRAND ORCHID SUITES</td><td>Deluxe King Room</td><td>₹8,823</td><td>Free cancellation until 7 days before check-in</td></tr><tr><td>TravelWholesale Co</td><td>Grand Orchid Suites</td><td>Deluxe King Room</td><td>₹9,617</td><td>FREE CXL 7D PRIOR</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Azure Palm Resort</h3>
+    <span class="badge" style="background:#d95f4b">TrustScore 57</span></header>
+  <p class="meta">Goa · ★★★★★ · best rate ₹10,688
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>✓ listed by 4 suppliers — identity cross-verified</li><li>⚠ photo counts differ a lot across suppliers — check imagery</li><li>⚠ cancellation terms CONFLICT across suppliers — check before booking</li></ul>
+  <details><summary>View all 4 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>DirectConnect</td><td>Azure Palm Resort</td><td>Deluxe King Room</td><td>₹10,688</td><td>FREE CXL 2D PRIOR</td></tr><tr><td>BedBank Alpha</td><td>Azure Palm Resort &amp; Spa Goa</td><td>Deluxe King Room</td><td>₹11,012</td><td>Free cancellation until 7 days before check-in</td></tr><tr><td>GlobalRooms</td><td>Azure Palm Resort &amp; Spa</td><td>Deluxe King Room</td><td>₹11,999</td><td>Cancellation: free up to 3 days prior to arrival</td></tr><tr><td>TravelWholesale Co</td><td>Azure Palm Resort</td><td>Deluxe King Room</td><td>₹12,964</td><td>Cancellation: free up to 5 days prior to arrival</td></tr></table></details>
+</article>
+<article class="card">
+  <header><h3>Old Town Heritage Inn</h3>
+    <span class="badge" style="background:#d95f4b">TrustScore 49</span></header>
+  <p class="meta">Jaipur · ★★★ · best rate ₹3,308
+     · rooms: Deluxe King Room</p>
+  <ul class="reasons"><li>⚠ single-supplier listing — cannot cross-verify identity</li><li>⚠ all rates stale (freshest is 80h old) — re-price before booking</li></ul>
+  <details><summary>View all 1 supplier records</summary>
+    <table><tr><th>Supplier</th><th>Their name</th><th>Room (normalised)</th><th>Price</th><th>Cancellation</th></tr>
+    <tr><td>DirectConnect</td><td>Old Town Heritage Inn</td><td>Deluxe King Room</td><td>₹3,308</td><td>Free cancellation until 1 days before check-in</td></tr></table></details>
+</article>
+<h2>Possible duplicates — flagged, NOT merged</h2><ul><li>R033 ↔ R031 — match score 0.66: flagged as possible duplicate, kept separate (conservative merge)</li><li>R031 ↔ R030 — match score 0.69: flagged as possible duplicate, kept separate (conservative merge)</li></ul>
+<p class="meta">Conservative merge doctrine: a wrong merge is worse than a duplicate, so
+mid-confidence pairs stay separate and visible. Team Sam10 Voyagers · VOYAGEHACK 4.0 · Multi Supplier Optimization.</p>
+</body></html>
