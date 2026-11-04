@@ -74,12 +74,16 @@ every underlying supplier record ("nothing hidden, everything explained").
 
 ## Roadmap to the Prototype Round (26 Nov – 24 Dec 2026)
 
-- Wrap the engine in a small HTTP API (stdlib `http.server`) behind the
-  before/after UI; add a sightseeing-dedup extension (inclusions-aware:
-  transfers, meals, duration, cancellation) per the problem statement.
-- Learn the merge threshold from labelled pairs; add photo-hash agreement
-  as a fifth signal; track precision/recall as a regression gate in CI.
-- 10-slide prototype deck + this repo on GitHub + recorded walkthrough video.
+- ~~HTTP API wrapper~~ DONE 2026-11-04: `trustscore/server.py` serves the
+  demo page, `/api/listings`, `/api/activities`, `/api/health` (stdlib only).
+- ~~Sightseeing extension~~ DONE 2026-11-04: `trustscore/sightseeing.py`
+  groups variants per attraction (IDF-weighted landmark tokens + geo) and
+  preserves inclusion differences with explicit not-like-for-like notes;
+  8 sample records → 4 groups, tests pass.
+- Still to do: learn the merge threshold from labelled pairs; add photo-hash
+  agreement as a fifth signal; track precision/recall as a regression gate.
+- 10-slide prototype deck DRAFT built 2026-11-04 (`voyagehack-4-prototype-deck`
+  in the goal files); recorded walkthrough video still to make in-round.
 
 ## Team
 
